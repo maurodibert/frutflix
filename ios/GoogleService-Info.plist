@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>476353985862-viiu6418r5fi7u5akd6dj2vlfh83gsjl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.476353985862-viiu6418r5fi7u5akd6dj2vlfh83gsjl</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>476353985862-h0u91k1q0mo7hffre6vk9hgcth9g02b9.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCFse4SyB5Z6VUIREFzmkTV3qwp0tzVfhQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>476353985862</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>frutflix</string>
+	<key>PROJECT_ID</key>
+	<string>frutflix-4bf41</string>
+	<key>STORAGE_BUCKET</key>
+	<string>frutflix-4bf41.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:476353985862:ios:b16b4ee101ca8e8016b947</string>
+</dict>
+</plist>

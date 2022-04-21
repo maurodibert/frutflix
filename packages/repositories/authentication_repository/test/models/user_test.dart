@@ -8,8 +8,8 @@ void main() {
 
     test('uses value equality', () {
       expect(
-        User(email: email, id: id),
-        equals(User(email: email, id: id)),
+        const User(email: email, id: id),
+        equals(const User(email: email, id: id)),
       );
     });
 
@@ -18,12 +18,12 @@ void main() {
     });
 
     test('isEmpty returns false for non-empty users', () {
-      final user = User(email: email, id: id);
+      const user = User(email: email, id: id);
       expect(user.isEmpty, isFalse);
     });
 
     test('isNotEmpty returns true for non-empty users', () {
-      final user = User(email: email, id: id);
+      const user = User(email: email, id: id);
       expect(user.isNotEmpty, isTrue);
     });
 

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "476353985862",
+    "project_id": "frutflix-4bf41",
+    "storage_bucket": "frutflix-4bf41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476353985862:android:2ea7f2ddb94a2f3d16b947",
+        "android_client_info": {
+          "package_name": "com.example.frutflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476353985862-h0u91k1q0mo7hffre6vk9hgcth9g02b9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.frutflix",
+            "certificate_hash": "2cae91003ebc02825ebe3cd58d22ae791310e872"
+          }
+        },
+        {
+          "client_id": "476353985862-uod6kc22jvp27hd19kcmqig8ri165aap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPovGMml_-iePCOKjanJdiyEMXy4knoLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476353985862-uod6kc22jvp27hd19kcmqig8ri165aap.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "476353985862-viiu6418r5fi7u5akd6dj2vlfh83gsjl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "frutflix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
