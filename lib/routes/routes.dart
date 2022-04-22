@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frutflix/app_regular_user/views/home/home.dart';
+import 'package:frutflix/app_user/views/home/home.dart';
 import 'package:frutflix/views/login/login.dart';
 import 'package:frutflix/views/sign_up/sign_up.dart';
 

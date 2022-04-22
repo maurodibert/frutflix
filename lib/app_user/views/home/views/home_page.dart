@@ -2,6 +2,7 @@ import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frutflix/app/app.dart';
+import 'package:frutflix/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
     User user = context.select((AppBloc appBloc) => appBloc.state.user);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Productos'),
         actions: [
           IconButton(
             key: const Key('homePage_logout_iconButton'),
@@ -21,16 +22,18 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Center(
-          child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('user: ${user.name}',
-              style: Theme.of(context).textTheme.headline4),
-          Text('email: ${user.email}',
-              style: Theme.of(context).textTheme.headline6),
-        ],
-      )),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: ((context, index) {
+            return const AppCard(
+              topTagText: '\$450',
+              bottomTagTitle: 'Bananas Argentinas',
+              bottomTagSubtitle: 'Salteña',
+              bottomTagDescription: 'Dejar fuera de heladera hasta madurar',
+              networkImageUrl:
+                  'https://d3ugyf2ht6aenh.cloudfront.net/stores/336/406/products/friends-s-11-7e885c70bf8fcc9f6515132990317982-1024-1024.jpg',
+            );
+          })),
     );
   }
 }

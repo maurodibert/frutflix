@@ -2,9 +2,10 @@ import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frutflix/routes/routes.dart';
+import 'package:frutflix/ui.dart';
 import 'package:frutflix/views/login/login.dart';
 
-import '../../app_regular_user/views/home/home.dart';
+import '../../app_user/views/home/home.dart';
 import '../bloc/app_bloc.dart';
 
 class App extends StatelessWidget {
@@ -35,6 +36,7 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: UI.lightTheme,
       debugShowCheckedModeBanner: false,
       routes: AppRoutes.routes,
       home: context.select((AppBloc bloc) => bloc.state.status) ==
