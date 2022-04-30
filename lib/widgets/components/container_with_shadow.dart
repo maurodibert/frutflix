@@ -14,7 +14,7 @@ class ContainerWithShadow extends StatelessWidget {
     String? networkImageUrl,
     BoxFit? boxFit,
   })  : _children = children,
-        _padding = padding ?? EdgeInsets.all(25),
+        _padding = padding ?? const EdgeInsets.all(25),
         _width = width ?? double.infinity,
         _height = height ?? 400.0,
         _color = color ?? Colors.white,

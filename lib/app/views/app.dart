@@ -5,7 +5,7 @@ import 'package:frutflix/routes/routes.dart';
 import 'package:frutflix/ui.dart';
 import 'package:frutflix/views/login/login.dart';
 
-import '../../app_user/views/home/home.dart';
+import '../../app_user/views/products/products.dart';
 import '../bloc/app_bloc.dart';
 
 class App extends StatelessWidget {
@@ -41,7 +41,7 @@ class AppView extends StatelessWidget {
       routes: AppRoutes.routes,
       home: context.select((AppBloc bloc) => bloc.state.status) ==
               AppStatus.authenticated
-          ? const HomePage()
+          ? const ProductsPage()
           : const LoginPage(),
     );
   }
