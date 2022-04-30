@@ -4,29 +4,34 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frutflix/routes/routes.dart';
 import 'package:frutflix/ui.dart';
 import 'package:frutflix/views/login/login.dart';
+import 'package:http_service/http_service.dart';
 
 import '../../app_user/views/products/products.dart';
-import '../bloc/app_bloc.dart';
+import '../auth_bloc/auth_bloc.dart';
 
 class App extends StatelessWidget {
   const App({
     Key? key,
+    required HttpService httpService,
     required AuthenticationRepository authenticationRepository,
-  })  : _authenticationRepository = authenticationRepository,
+  })  : _httpService = httpService,
+        _authenticationRepository = authenticationRepository,
         super(key: key);
-
+  final HttpService _httpService;
   final AuthenticationRepository _authenticationRepository;
 
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider.value(
-      value: _authenticationRepository,
-      child: BlocProvider(
-        create: (context) =>
-            AppBloc(authenticationRepository: _authenticationRepository),
-        child: const AppView(),
-      ),
-    );
+    return MultiRepositoryProvider(
+        providers: [
+          RepositoryProvider.value(value: _authenticationRepository),
+          RepositoryProvider.value(value: _httpService),
+        ],
+        child: BlocProvider(
+          create: (context) =>
+              AuthBloc(authenticationRepository: _authenticationRepository),
+          child: const AppView(),
+        ));
   }
 }
 
@@ -39,7 +44,7 @@ class AppView extends StatelessWidget {
       theme: UI.lightTheme,
       debugShowCheckedModeBanner: false,
       routes: AppRoutes.routes,
-      home: context.select((AppBloc bloc) => bloc.state.status) ==
+      home: context.select((AuthBloc bloc) => bloc.state.status) ==
               AppStatus.authenticated
           ? const ProductsPage()
           : const LoginPage(),

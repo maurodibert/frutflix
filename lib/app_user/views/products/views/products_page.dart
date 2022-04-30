@@ -10,7 +10,7 @@ class ProductsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    User user = context.select((AppBloc appBloc) => appBloc.state.user);
+    User user = context.select((AuthBloc appBloc) => appBloc.state.user);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Productos'),
@@ -18,7 +18,8 @@ class ProductsPage extends StatelessWidget {
           IconButton(
             key: const Key('homePage_logout_iconButton'),
             icon: const Icon(Icons.exit_to_app),
-            onPressed: () => context.read<AppBloc>().add(AppLogoutRequested()),
+            onPressed: () =>
+                context.read<AuthBloc>().add(AuthLogoutRequested()),
           )
         ],
       ),
