@@ -38,6 +38,13 @@ class ProductsPage extends StatelessWidget {
               ),
             );
           })),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.primaries[0],
+        child: const Icon(
+          Icons.add,
+        ),
+        onPressed: () {},
+      ),
     );
   }
 }

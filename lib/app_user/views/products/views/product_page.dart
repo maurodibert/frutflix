@@ -15,13 +15,21 @@ class ProductPage extends StatelessWidget {
     );
 
     return Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.primaries[0],
+          child: const Icon(
+            Icons.abc_outlined,
+          ),
+          onPressed: () {},
+        ),
         body: SingleChildScrollView(
-      child: Column(children: [
-        _ProductHeader(size: _size, radius: _radius),
-        const _ProductForm(),
-        ...gapH48.multiplyBy(2),
-      ]),
-    ));
+          child: Column(children: [
+            _ProductHeader(size: _size, radius: _radius),
+            const _ProductForm(),
+            ...gapH48.multiplyBy(2),
+          ]),
+        ));
   }
 }
 
