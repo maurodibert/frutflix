@@ -9,3 +9,7 @@ extension Operations on SizedBox {
     return _emptyBoxes;
   }
 }
+
+extension StringHardcoded on String {
+  String get hardcoded => this;
+}
